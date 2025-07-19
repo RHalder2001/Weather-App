@@ -39,12 +39,11 @@
                             <li><a class="dropdown-item" href="#">Mumbai</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
+
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <form class="d-flex" role="search" id="searchForm"  >
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        id="submi" />
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -57,7 +56,7 @@
 
     <div class="container">
 
-        <h1 class="weather city" style="text-align:center;", >Weather for Delhi</h1>
+        <h1 class="weather city" style="text-align:center;" id="cityHeading",></h1>
 
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -72,11 +71,10 @@
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>Temperature is <span id="tem"></span> </li>
                                 <li>Max Temperature is <span id="temp_max"></span></li>
-                                <li>Min Temperature is  <span id="temp_min"></span> </li>
-                                 
-                                
-                            </ul> <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for
-                                free</button>
+                                <li>Min Temperature is <span id="temp_min"></span> </li>
+
+
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -86,113 +84,35 @@
                             <h4 class="my-0 fw-normal">Humidity Info</h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$15<small
-                                    class="text-body-secondary fw-light">/mo</small></h1>
+                            <h1 class="card-title pricing-card-title"><span id='humidity'></span><small
+                                    class="text-body-secondary fw-light"></small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
-                                <li>Temperature is <span id'temp'></span></li>
-                                <li>Temperature is <span id'temp'></span></li>
-                                <li>Temperature is <span id'temp'></span></li>
-                            </ul> <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                                <li> Feels Like <span id='feels_like'></span></li>
+                                <li>Pressure <span id='pressure'></span></li>
+                                <li>Sea Level <span id='sea_level'></span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
-                        <div class="card-header py-3 text-bg-primary border-primary">
-                            <h4 class="my-0 fw-normal">Enterprise</h4>
+                    <div class="card mb-4 roun ">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">Wind Info</h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$29<small
-                                    class="text-body-secondary fw-light">/mo</small></h1>
+                            <h1 class="card-title pricing-card-title"> <span id='speed'></span><small
+                                    class="text-body-secondary fw-light"> km/hr</small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
-                                <li>30 users included</li>
-                                <li>15 GB of storage</li>
-                                <li>Phone and email support</li>
-                                <li>Help center access</li>
-                            </ul> <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                                <li>Wind Degree <span id='deg'></span> </li>
+                                <li>Sunrise Time <span id='sunrise'></span> </li>
+                                <li>Sunset Time <span id='sunset'></span></li>
+
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <h2 class="display-6 text-center mb-4">Weather Of Other Common Places</h2>
-            <div class="table-responsive">
-                <table class="table text-center" style="table-layout: fixed; width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Feels_like</th>
-                            <th>Grnd_level</th>
-                            <th>Humidity</th>
-                            <th>Pressure</th>
-                            <th>Sea_level</th>
-                            <th>Temp</th>
-                            <th>Temp_max</th>
-                            <th>Temp_min</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Kolkata</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Delhi</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Mumbai</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Bangalore</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Lucknow</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Pune</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td>2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
 
 
 
